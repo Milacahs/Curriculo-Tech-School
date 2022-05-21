@@ -1,0 +1,26 @@
+#cartela {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartela table{
+    border: 2px solid black;
+}
+
+#cartela thead{
+    background-color: rgb(211, 180, 240);
+}
+
+#cartela table tr{
+    font-size: 30px;
+    margin: 10px;
+}
+
+#cartela table tr td{
+    width: 50px;
+    text-align: center;
+    border: 1px solid black;    
+}
+
