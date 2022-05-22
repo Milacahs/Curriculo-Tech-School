@@ -20,8 +20,6 @@ function gerarNumerosAleatorios(quantidade, min, max){
 
 function gerarCartelaBingo(){
 
-    numeroCartelas = numeroCartelas + 1;
-
     let dono = prompt("Digite o nome do dono da cartela:");
     let h3dono = document.createElement("h3");
     h3dono.innerText = dono;
@@ -85,7 +83,6 @@ function gerarCartelaBingo(){
 }
 
 var jogoEstaAcontecendo = false;
-var numeroCartelas = 0;
 
 function deletarCartelas(){
 
@@ -107,9 +104,7 @@ function deletarCartelas(){
     let cartelas = divCartela.getElementsByTagName("table");
     let h3donos = divCartela.getElementsByTagName("h3");
     let spans = divSorteio.getElementsByTagName("span");
-
-    let divPerdida = divCartela.getElementsByTagName("div");
-    
+ 
     while(cartelas[0]){
        cartelas[0].parentNode.removeChild(cartelas[0]);
     }
@@ -118,10 +113,6 @@ function deletarCartelas(){
     }
     while(spans[0]){
         spans[0].parentNode.removeChild(spans[0]);
-    }
-
-    while(divPerdida[0]){
-        divPerdida[0].parentNode.removeChild(divPerdida[0]);
     }
 
 }
