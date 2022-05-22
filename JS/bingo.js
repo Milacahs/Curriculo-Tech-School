@@ -5,11 +5,11 @@ function gerarNumerosAleatorios(quantidade, min, max){
         return;
     }
 
-    let numeroAleatorio = [];
+    let numerosAleatorios = [];
 
     for(let i = 0; i < quantidade; i++){
         let numero = Math.ceil(Math.random()*(max - min)) + min;
-        if(numerosAleatorios.indexOf(numero)!== -1){
+        if(numerosAleatorios.indexOf(numero) !== -1){
             i --;
         }else{
             numerosAleatorios.push(numero);
@@ -19,6 +19,8 @@ function gerarNumerosAleatorios(quantidade, min, max){
 }
 
 function gerarCartelaBingo(){
+
+    numeroCartelas = numeroCartelas + 1;
 
     let dono = prompt("Digite o nome do dono da cartela:");
     let h3dono = document.createElement("h3");
@@ -68,7 +70,7 @@ function gerarCartelaBingo(){
 
     for(let i = 0; i <5; i++){
         let linha_dados = document.createElement("tr");
-        for(let j = 0; j <5; j++){
+        for(let j = 0; j < 5; j++){
             let td = document.createElement("td");
             td.innerText = cartelaBingo[j][i];
             linha_dados.appendChild(td);            
@@ -145,7 +147,7 @@ function sorteio(){
         let aleatorio = 0;
         do {
             aleatorio = Math.ceil(Math.random() * 75);
-        } while (numerosSorteados.indexOf(aleatorio) !== -1){
+        } while (numerosSorteados.indexOf(aleatorio) !== -1)
                     
         numerosSorteados.push(aleatorio);
         let numero = document.createElement("span");
@@ -153,7 +155,7 @@ function sorteio(){
         divsorteados.appendChild(numero);
 
         //Conferir as cartelas
-        for(let i = 0; i <cartelas.length; i++){
+        for(let i = 0; i < cartelas.length; i++){
             let nomeJogador = cartelas[i].getElementsByTagName("h3")[0].innerText;
             let numerosCartela = cartelas[i].getElementsByTagName("td");
             for(let j = 0; j < numerosCartela.length; j++){
@@ -163,7 +165,7 @@ function sorteio(){
             }
 
             if(verificarVencedor(numerosCartela, numerosSorteados)){
-                alert("Parabéns ${nomeJogador}! Você venceu o bingo!");
+                alert(`Parabéns ${nomeJogador}! Você venceu o bingo!`);
                 clearInterval(intervalo);
                 jogoEstaAcontecendo = false;
             }
@@ -184,8 +186,7 @@ function pararJogo(){
 
 function verificarVencedor(cartela, numerosSorteados){
 
-    if(numerosSorteados.length < 25){ return;
-    }
+    if(numerosSorteados.length < 25) return;
 
     cartela = [...cartela];
     cartela.splice(0,5);
@@ -198,6 +199,5 @@ function verificarVencedor(cartela, numerosSorteados){
         }
     }
 
-    return true;
-         
+    return true;         
 }

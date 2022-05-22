@@ -11,17 +11,17 @@
     margin: 10px;
 }
 
-#cartela thead{
+#cartela thead tr{
     background-color: rgb(211, 180, 240);
 }
 
 #cartela table tr{
-    font-size: 30px;
+    font-size: 25px;
     margin: 10px;
 }
 
 #cartela table tr td{
-    width: 50px;
+    width: 60px;
     text-align: center;
     border: 1px solid black;    
 }
@@ -50,12 +50,12 @@
 
 #sorteados span{
     font-size: 30px;
-    background-color:rgb(58, 56, 69);
+    background-color:rgb(211, 180, 240);
     padding: 2px;
     margin: 3px;
     width: 40px;
     height: 40px;
     text-align: center;
-    border: 1px solid rgb(255, 251, 233);
+    border: 1px solid black;
     border-radius: 50%;
 }
