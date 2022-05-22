@@ -1,18 +1,20 @@
-let area_cartela = document.getElementById("cartela");
+function gerarCartelaBingo(){
+
+    let area_cartela = document.getElementById("cartela");
     let cartela = document.createElement("table");
     let cabecalho_cartela = document.createElement("thead");
     let corpo_cartela = document.createElement("tbody");
     let linha = document.createElement("tr");
     let coluna1 = document.createElement("td");
-    coluna1.innerText = "B";
+        coluna1.innerText = "B";
     let coluna2 = document.createElement("td");
-    coluna2.innerText = "I";
+        coluna2.innerText = "I";
     let coluna3 = document.createElement("td");
-    coluna3.innerText = "N";
+        coluna3.innerText = "N";
     let coluna4 = document.createElement("td");
-    coluna4.innerText = "G";
+        coluna4.innerText = "G";
     let coluna5 = document.createElement("td");
-    coluna5.innerText = "O";
+        coluna5.innerText = "O";
 
     linha.appendChild(coluna1);
     linha.appendChild(coluna2);
@@ -22,17 +24,19 @@ let area_cartela = document.getElementById("cartela");
 
     cabecalho_cartela.appendChild(linha);
 
-    area_cartela.appendChild(cartela);
+    cartela.appendChild(cabecalho_cartela); 
 
     for(let i = 0; i <5; i++){
         let linha_dados = document.createElement("tr");
-            for(let j = 0; j <5; j++){
-                let td = document.createElement("td");
-                td.innerText = Math.ceil(Math.random()*75);
-                linha_dados.appendChild(td);            
+        for(let j = 0; j <5; j++){
+            let td = document.createElement("td");
+            td.innerText = Math.ceil(Math.random()*75);
+            linha_dados.appendChild(td);            
         }
         corpo_cartela.appendChild(linha_dados);
     }
 
     cartela.appendChild(corpo_cartela);
-    cartela.appendChild(cabecalho_cartela);  
+
+    area_cartela.appendChild(cartela);
+}

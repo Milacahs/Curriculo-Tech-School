@@ -24,3 +24,13 @@
     border: 1px solid black;    
 }
 
+#cabecalho {
+    margin: 20px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;    
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
