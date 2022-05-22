@@ -63,11 +63,16 @@
         <main class="container">
             <div id="cabecalho">
                 <button type="button" class="btn btn-primary" onclick="gerarCartelaBingo()">Gerar Cartela de Bingo</button>
-                <button type="button" class="btn btn-success">Iniciar Jogo</button>
-                <button type="button" class="btn btn-secondary">Limpar Cartelas</button>
+                <button type="button" class="btn btn-success" onclick="sorteio()">Iniciar Jogo</button>
+                <button type="button" class="btn btn-warning" onclick="pararJogo()">Parar Jogo</button>
+                <button type="button" class="btn btn-secondary" onclick="deletarCartelas()">Limpar Cartelas</button>
             </div>
+
+            <div id="sorteados"></div>
             <div class="bg-light p-5 rounded" id="cartela"></div>
-        </main>   
+
+            
+          </main>   
     </section>
 
 
